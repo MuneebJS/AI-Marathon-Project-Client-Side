@@ -8,7 +8,8 @@ import registerServiceWorker from './registerServiceWorker';
 // import { store } from './store/index'
 // import * as firebase from 'firebase';
 // import { BrowserRouter } from 'react-router-dom'
-import App from './App'
+import Main from './App'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 // var config = {
 //     apiKey: "AIzaSyB92CLMSaw4djN_lP7cciwrI-xLbvAaf-0",
@@ -19,6 +20,12 @@ import App from './App'
 //     messagingSenderId: "925511370275"
 // };
 // firebase.initializeApp(config);
+
+const App = () => (
+    <MuiThemeProvider>
+      <Main />
+    </MuiThemeProvider>
+  );
 
 ReactDOM.render(
     // <Provider store={store}>
